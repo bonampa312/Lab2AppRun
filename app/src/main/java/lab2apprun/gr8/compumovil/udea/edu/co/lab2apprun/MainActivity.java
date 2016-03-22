@@ -1,6 +1,7 @@
 package lab2apprun.gr8.compumovil.udea.edu.co.lab2apprun;
 
 import android.app.AlertDialog;
+import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -15,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import layout.AppInfoFragment;
 import layout.Fragment1;
 
 public class MainActivity extends AppCompatActivity {
@@ -50,19 +52,27 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Fragment1 fragment = null;
+                Fragment1 fragment1 = null;
+                AppInfoFragment fragment2 = null;
+                RegisterActivity fragment3 = null;
 
                 Log.d("Posicion", String.valueOf(position));
 
                 switch (position) {
                     case 0:
-                        fragment = new Fragment1();
+                        fragment1 = new Fragment1();
+                        break;
+                    case 1:
+                        fragment1 = new Fragment1();
+                        break;
+                    case 2:
+                        fragment1 = new Fragment1();
                         break;
                     case 4:
                         closeApp();
                         break;
                     default:
-                        fragment = new Fragment1();
+                        fragment1 = new Fragment1();
                         break;
 
                 }
@@ -71,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 // que nosotros queremos. y usamos el metodo commit para actualizar el estado
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 fragmentManager.beginTransaction()
-                        .replace(R.id.frameContainer, fragment)
+                        .replace(R.id.frameContainer, fragment1)
                         .commit();
 
 

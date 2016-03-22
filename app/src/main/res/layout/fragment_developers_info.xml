@@ -1,0 +1,53 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.DevelopersInfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/developersInfoLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/linearLayoutDev1"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            >
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/batmanImage"
+            android:src="@drawable/batman"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/linearLayoutDev2"
+            android:layout_below="@+id/linearLayoutDev1"
+            android:layout_height="0dp"
+            >
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/wolverineImage"
+                android:src="@drawable/wolverine"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textDeveloper2"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/wolverineImage"
+                android:text="Santiago Romero Restrepo \n "
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

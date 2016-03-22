@@ -1,0 +1,68 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.AppInfoFragment"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/appInfoLayout"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        >
+
+        <TextView
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:id="@+id/appInfoTextTitle"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:text="Laboratorio 2" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/appInfoTextSubject"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Computación móvil" />
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/appInfoTextTeacher"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Sebastián Guzmán Obando" />
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/appInfoTextDate"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="2016 - 1" />
+        
+        <ImageView
+            android:layout_marginTop="50dp"
+            android:src="@drawable/androidlogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+
+    </LinearLayout>
+</FrameLayout>

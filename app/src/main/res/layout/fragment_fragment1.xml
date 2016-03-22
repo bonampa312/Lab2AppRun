@@ -5,7 +5,8 @@
     tools:context="layout.Fragment1"
     android:layout_gravity="center"
     android:foregroundGravity="center_horizontal"
-    android:backgroundTint="@color/colorPrimary">
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
