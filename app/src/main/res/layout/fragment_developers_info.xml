@@ -22,6 +22,15 @@
             android:id="@+id/batmanImage"
             android:src="@drawable/batman"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textDeveloper1"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/batmanImage"
+                android:text="Santiago Parra Rendón\nsantiago.parra.rendon.kcio@.com\n1234567890"
+                />
         </RelativeLayout>
 
         <RelativeLayout
@@ -42,8 +51,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textDeveloper2"
                 android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
                 android:layout_toRightOf="@+id/wolverineImage"
-                android:text="Santiago Romero Restrepo \n "
+                android:text="Santiago Romero Restrepo\nsantiago.romero@udea.edu.co\n1026154938"
                 />
 
         </RelativeLayout>

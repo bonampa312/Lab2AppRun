@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     public void onClickLogin(View view){
         Intent i = new Intent(this,MainActivity.class);
         startActivityForResult(i, REQUEST_CODE);
+        finish();
     }
 
 }

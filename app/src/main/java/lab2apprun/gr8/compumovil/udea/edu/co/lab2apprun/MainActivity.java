@@ -17,6 +17,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import layout.AppInfoFragment;
+import layout.DevelopersInfoFragment;
 import layout.Fragment1;
 
 public class MainActivity extends AppCompatActivity {
@@ -54,35 +55,47 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Fragment1 fragment1 = null;
                 AppInfoFragment fragment2 = null;
-                RegisterActivity fragment3 = null;
+                DevelopersInfoFragment fragment3 = null;
 
                 Log.d("Posicion", String.valueOf(position));
+
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
 
                 switch (position) {
                     case 0:
                         fragment1 = new Fragment1();
+                        fragmentManager.beginTransaction()
+                                .replace(R.id.frameContainer, fragment1)
+                                .commit();
                         break;
                     case 1:
-                        fragment1 = new Fragment1();
+                        fragment2 = new AppInfoFragment();
+                        fragmentManager.beginTransaction()
+                                .replace(R.id.frameContainer, fragment2)
+                                .commit();
                         break;
                     case 2:
-                        fragment1 = new Fragment1();
+                        fragment3 = new DevelopersInfoFragment();
+                        fragmentManager.beginTransaction()
+                                .replace(R.id.frameContainer, fragment3)
+                                .commit();
                         break;
                     case 4:
                         closeApp();
                         break;
                     default:
                         fragment1 = new Fragment1();
+                        fragmentManager.beginTransaction()
+                                .replace(R.id.frameContainer, fragment1)
+                                .commit();
                         break;
 
                 }
 
                 //indicamos que se va comenzar una transaccion para colocar dentro del contenedor de frame el Fragment
                 // que nosotros queremos. y usamos el metodo commit para actualizar el estado
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.frameContainer, fragment1)
-                        .commit();
+
 
 
 
@@ -154,7 +167,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 switch (which){
                     case DialogInterface.BUTTON_POSITIVE:
-                        onDestroy();
+                        System.exit(0);
+                        finish();
                         break;
                     case DialogInterface.BUTTON_NEGATIVE:
                         //No button clicked
@@ -168,10 +182,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public void finish(){
-        Intent data = new Intent();
-        setResult(RESULT_OK, data);
-        super.finish();
-    }
 }
