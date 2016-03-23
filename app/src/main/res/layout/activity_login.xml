@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:hint="Usuario"
             android:inputType="textNoSuggestions"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:digits="abcdefghijklmnopqrstuvwxyz"
             />
         <EditText
             android:id="@+id/passwordLoginField"
